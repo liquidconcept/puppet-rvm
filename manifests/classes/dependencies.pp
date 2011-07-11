@@ -18,5 +18,7 @@ class rvm::dependencies {
   if ! defined(Package['libxslt1-dev'])         { package { 'libxslt1-dev':         ensure => installed, alias => 'libxslt-dev' } }
   if ! defined(Package['autoconf'])             { package { 'autoconf':             ensure => installed } }
   if ! defined(Package['libc6-dev'])            { package { 'libc6-dev':            ensure => installed } }
+  if ! defined(Package['libopenssl-ruby'])      { package { 'libopenssl-ruby':      ensure => installed } }
+  if ! defined(Package['libcurl4-openssl-dev']) { package { 'libcurl4-openssl-dev': ensure => installed } }
 
 }

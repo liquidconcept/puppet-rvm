@@ -1,0 +1,1 @@
+class rvm::passenger::nginx::ubuntu::post{}
