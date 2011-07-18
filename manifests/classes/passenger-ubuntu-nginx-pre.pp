@@ -18,6 +18,7 @@ class rvm::passenger::nginx::ubuntu::pre {
   exec { "Unpack nginx ${nginx_version}":
     command => "/bin/tar xf nginx-${nginx_version}.tar.gz",
     cwd => "/tmp",
+    unless => "test -d /tmp/nginx-${nginx_version}",
     require => [
       Exec["Download nginx ${nginx_version}"],
     ]
